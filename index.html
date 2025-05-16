@@ -25,7 +25,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables pour une maintenance plus facile */
         :root {
             --primary-color: #70B0BA;
             --primary-light: #9CCCD6;
@@ -38,7 +37,6 @@
             --transition: all 0.3s ease;
         }
 
-        /* Réinitialisation et base */
         * {
             margin: 0;
             padding: 0;
@@ -65,7 +63,6 @@
             text-decoration: underline;
         }
 
-        /* Bordure religieuse avec symboles */
         .religious-border {
             height: 8px;
             background: linear-gradient(90deg, var(--primary-color), var(--primary-light), var(--primary-color));
@@ -93,7 +90,6 @@
             margin-bottom: 0;
         }
 
-        /* Container du logo avec décoration */
         .logo-container {
             position: relative;
             display: inline-block;
@@ -115,7 +111,6 @@
             opacity: 1;
         }
 
-        /* Header et navigation */
         header {
             background-color: var(--white);
             padding: 1rem 2rem;
@@ -212,7 +207,6 @@
             color: var(--white);
         }
 
-        /* Mode sombre */
         .dark-mode {
             background-color: var(--dark-bg);
             color: var(--white);
@@ -257,7 +251,6 @@
             border-color: var(--primary-dark);
         }
 
-        /* Main content */
         main {
             max-width: 1200px;
             margin: 0 auto;
@@ -286,7 +279,6 @@
             text-align: center;
         }
 
-        /* Banner */
         .banner {
             position: relative;
             height: 300px;
@@ -335,7 +327,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        /* Text bubbles */
         .text-bubble {
             background-color: var(--light-bg);
             border: 1px solid var(--primary-light);
@@ -389,7 +380,6 @@
             background: var(--dark-bg);
         }
 
-        /* Events */
         .event {
             margin-bottom: 3rem;
         }
@@ -419,7 +409,6 @@
             background: var(--dark-bg-hover);
         }
 
-        /* Carousel */
         .carousel {
             position: relative;
             width: 100%;
@@ -471,7 +460,6 @@
             background: rgba(255, 255, 255, 0.8);
         }
 
-        /* Bible verses mosaic */
         .bible-verses-mosaic {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -504,7 +492,6 @@
             font-weight: 600;
         }
 
-        /* Contact section */
         .social-links {
             display: flex;
             justify-content: center;
@@ -531,14 +518,12 @@
             text-decoration: none;
         }
 
-        /* Map container */
         .map-container {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
 
-        /* Footer */
         footer {
             background-color: var(--primary-dark);
             color: var(--white);
@@ -559,7 +544,6 @@
             vertical-align: middle;
         }
 
-        /* Back to top button */
         #back-to-top {
             position: fixed;
             bottom: 20px;
@@ -591,7 +575,6 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -773,4 +756,140 @@
             </div>
         
             <div class="event">
-                <h3><i class="fas fa-star-
+                <h3><i class="fas fa-star-of-david"></i> Événements à venir</h3>
+                <div class="text-bubble event-bubble">
+                    <div class="event-decoration">✟</div>
+                    <p>Nous vous invitons au Jubilé des jeunes, un moment unique de prière, de louange et de fraternité. Rejoignez-nous pour célébrer ensemble et vivre une expérience spirituelle inoubliable !</p>
+                    <p>Inscris-toi ici : <strong><a href="https://emmanuel.info/jubile-jeunes-2025/">jubile-jeunes-2025</a></strong></p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="https://i.imgur.com/0ganjGP.jpg" alt="Affiche du Jubilé des jeunes" class="carousel-image">
+                        <img src="https://i.imgur.com/xj2ev9u.jpg" alt="Moment du Jubilé des jeunes" class="carousel-image">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                </div>
+            </div>
+        
+            <h3><i class="fas fa-bible"></i> Références Bibliques Inspirantes</h3>
+            <div class="bible-verses-mosaic">
+                <div class="verse-tile">
+                    <p>"Je suis le chemin, la vérité et la vie"</p>
+                    <small>Jean 14:6</small>
+                </div>
+                <div class="verse-tile">
+                    <p>"L'Éternel est mon berger"</p>
+                    <small>Psaume 23:1</small>
+                </div>
+                <div class="verse-tile">
+                    <p>"Dieu est amour"</p>
+                    <small>1 Jean 4:8</small>
+                </div>
+                <div class="verse-tile">
+                    <p>"Priez sans cesse"</p>
+                    <small>1 Thessaloniciens 5:17</small>
+                </div>
+                <div class="verse-tile">
+                    <p>"Aimez-vous les uns les autres"</p>
+                    <small>Jean 13:34</small>
+                </div>
+                <div class="verse-tile">
+                    <p>"Tout est possible à celui qui croit"</p>
+                    <small>Marc 9:23</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2><i class="fas fa-envelope"></i> Contactez-nous</h2>
+            <div class="text-bubble">
+                <p>Envoyez-nous un message à <a href="mailto:jeunes.emmanuel.nantes@gmail.com"><i class="fas fa-envelope"></i> jeunes.emmanuel.nantes@gmail.com</a> ou suivez-nous sur nos réseaux sociaux :</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/gp_emmanuel_nantes" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/gpemmanuelnantes" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@gpemmanuelnantes" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-decoration">✝</div>
+        <p><i class="fas fa-cross"></i> © 2025 Groupe de Prière Emmanuel Nantes. Tous droits réservés.</p>
+        <div class="footer-decoration">✝</div>
+    </footer>
+
+    <div class="religious-border bottom-border"></div>
+
+    <button id="back-to-top" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Carousel functionality
+            document.querySelectorAll('.carousel').forEach(carousel => {
+                const inner = carousel.querySelector('.carousel-inner');
+                const images = inner.querySelectorAll('.carousel-image');
+                const prev = carousel.querySelector('.carousel-prev');
+                const next = carousel.querySelector('.carousel-next');
+                let index = 0;
+
+                function showImage(idx) {
+                    inner.style.transform = `translateX(-${idx * 100}%)`;
+                }
+
+                prev.addEventListener('click', () => {
+                    index = (index > 0) ? index - 1 : images.length - 1;
+                    showImage(index);
+                });
+
+                next.addEventListener('click', () => {
+                    index = (index < images.length - 1) ? index + 1 : 0;
+                    showImage(index);
+                });
+            });
+
+            // Back to Top Button
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Night Mode Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Check for saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
