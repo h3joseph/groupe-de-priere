@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Groupe de prière Emmanuel Nantes pour jeunes de 18-25 ans. Rejoignez-nous pour prier, louer et grandir dans la foi à l'église Sainte-Madeleine.">
+    <meta name="keywords" content="groupe de prière,gp_emmanuel_nantes,gp,jeunes, Nantes, église Sainte-Madeleine, Communauté Emmanuel, foi, spiritualité">
+    <meta name="author" content="Groupe de Prière Emmanuel Nantes">
+   
+    <meta property="og:title" content="Groupe de Prière Emmanuel Nantes">
+    <meta property="og:description" content="Rejoignez notre groupe de prière pour jeunes de 18-25 ans à l'église Sainte-Madeleine, Nantes. Prière, louange et fraternité !">
+    <meta property="og:image" content="https://i.imgur.com/wocrVOL.png">
+    <meta property="og:url" content="https://gpemmanuelnantes.fr">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Groupe de Prière Emmanuel Nantes">
+    <meta name="twitter:description" content="Rejoignez notre groupe de prière pour jeunes de 18-25 ans à l'église Sainte-Madeleine, Nantes. Prière, louange et fraternité !">
+    <meta name="twitter:image" content="https://i.imgur.com/wocrVOL.png">
+   
+    <link rel="canonical" href="https://gpemmanuelnantes.fr">
+    <title>Groupe de Prière Emmanuel Nantes</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/wocrVOL.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables pour une maintenance plus facile */
+        :root {
+            --primary-color: #70B0BA;
+            --primary-light: #9CCCD6;
+            --primary-dark: #5A9099;
+            --white: #ffffff;
+            --light-bg: #f8f8f8;
+            --dark-bg: #2c2c2c;
+            --dark-bg-hover: #333;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Réinitialisation et base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Bordure religieuse avec symboles */
+        .religious-border {
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light), var(--primary-color));
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .religious-border::before {
+            content: "✝ ✞ ✟";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--primary-color);
+            font-size: 20px;
+            background: var(--white);
+            padding: 0 15px;
+        }
+
+        .top-border {
+            margin-top: 0;
+        }
+
+        .bottom-border {
+            margin-bottom: 0;
+        }
+
+        /* Container du logo avec décoration */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .cross-decoration {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 24px;
+            color: var(--primary-color);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .logo-container:hover .cross-decoration {
+            transform: rotate(15deg);
+            opacity: 1;
+        }
+
+        /* Header et navigation */
+        header {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            color: #333;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .first-letter {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            vertical-align: middle;
+        }
+
+        .highlight-word {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        nav li {
+            margin: 0 0.5rem;
+        }
+
+        nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #333;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-light);
+            color: var(--white);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        #theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.2rem;
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        #theme-toggle:hover {
+            background: var(--primary-light);
+            color: var(--white);
+        }
+
+        /* Mode sombre */
+        .dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--white);
+        }
+
+        .dark-mode header {
+            background-color: var(--dark-bg);
+            color: var(--white);
+        }
+
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: var(--white);
+        }
+
+        .dark-mode nav a {
+            color: var(--white);
+        }
+
+        .dark-mode nav a:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .dark-mode .text-bubble {
+            background-color: var(--dark-bg-hover);
+            border-color: var(--primary-dark);
+        }
+
+        .dark-mode #theme-toggle {
+            background: var(--dark-bg);
+            color: var(--white);
+            border-color: var(--primary-dark);
+        }
+
+        .dark-mode .religious-border::before {
+            background: var(--dark-bg);
+        }
+
+        .dark-mode .verse-tile {
+            background-color: var(--dark-bg-hover);
+            border-color: var(--primary-dark);
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .dark-mode section {
+            background-color: var(--dark-bg-hover);
+        }
+
+        section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            text-align: center;
+        }
+
+        /* Banner */
+        .banner {
+            position: relative;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .banner h2 {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            border-bottom: none;
+        }
+
+        .bible-verse-decoration {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--primary-light);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Text bubbles */
+        .text-bubble {
+            background-color: var(--light-bg);
+            border: 1px solid var(--primary-light);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .text-bubble:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .text-bubble p {
+            margin-bottom: 1rem;
+        }
+
+        .text-bubble p:last-child {
+            margin-bottom: 0;
+        }
+
+        .religious-symbol {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: var(--primary-light);
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .prayer-bubble {
+            border-width: 2px;
+            background-color: rgba(112, 176, 186, 0.1);
+        }
+
+        .bubble-decoration {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 24px;
+            background: var(--white);
+            padding: 0 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .bubble-decoration {
+            background: var(--dark-bg);
+        }
+
+        /* Events */
+        .event {
+            margin-bottom: 3rem;
+        }
+
+        .event h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+            text-align: center;
+        }
+
+        .event-bubble {
+            background-color: rgba(112, 176, 186, 0.05);
+        }
+
+        .event-decoration {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 24px;
+            color: var(--primary-color);
+            background: var(--white);
+            padding: 0 10px;
+        }
+
+        .dark-mode .event-decoration {
+            background: var(--dark-bg-hover);
+        }
+
+        /* Carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-prev:hover,
+        .carousel-next:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Bible verses mosaic */
+        .bible-verses-mosaic {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .verse-tile {
+            background-color: var(--white);
+            border: 1px solid var(--primary-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .verse-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .verse-tile p {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .verse-tile small {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* Contact section */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+            background-color: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        /* Map container */
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .dark-mode footer {
+            background-color: var(--dark-bg);
+            border-top: 1px solid var(--primary-dark);
+        }
+
+        .footer-decoration {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            vertical-align: middle;
+        }
+
+        /* Back to top button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .first-letter {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.25rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .banner {
+                height: 250px;
+            }
+
+            .banner h2 {
+                font-size: 1.2rem;
+            }
+
+            .bible-verses-mosaic {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .bible-verses-mosaic {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Groupe de Prière Emmanuel Nantes",
+      "url": "https://gpemmanuelnantes.fr",
+      "logo": "https://i.imgur.com/wocrVOL.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@gpemmanuelnantes.fr",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://instagram.com/gp_emmanuel_nantes",
+        "https://facebook.com/gpemmanuelnantes",
+        "https://tiktok.com/@gpemmanuelnantes"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="religious-border top-border"></div>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://i.imgur.com/wocrVOL.png" alt="Logo Groupe de Prière Emmanuel Nantes" class="logo">
+                <div class="cross-decoration">✝</div>
+            </div>
+            <h1><span class="first-letter">G</span>roupe de <span class="highlight-word">Prière</span> Emmanuel Nantes</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#a-propos"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="#horaires"><i class="fas fa-clock"></i> Horaires</a></li>
+                <li><a href="#evenements"><i class="fas fa-calendar-alt"></i> Événements</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" title="Activer/Désactiver le mode nuit">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <div class="banner">
+                <div class="banner-overlay"></div>
+                <div class="banner-content">
+                    <h2>« Là où deux ou trois sont réunis en mon nom, je suis là, au milieu d'eux. »<br>Matthieu 18, 20</h2>
+                    <div class="bible-verse-decoration">✝</div>
+                </div>
+            </div>
+            <div class="text-bubble prayer-bubble">
+                <div class="bubble-decoration">🙏</div>
+                <p>Bienvenue sur le site du groupe de prière jeunes de L' <a href="https://emmanuel.info/"><strong>Emmanuel</strong></a> à Nantes !</p>
+                <p>Tu as entre 18 et 25 ans ? Étudiant, jeune pro, en chemin vers Dieu ou juste curieux ? Tu es au bon endroit.</p>
+                <p>Ici, on prie, on loue, on partage, on rit, on apprend à avancer ensemble, dans la foi, dans la joie et dans l'amitié.</p>
+                <p>Tu es le bienvenu, tel que tu es.</p>
+                <div class="religious-symbol">✝</div>
+            </div>
+        </section>
+
+        <section id="a-propos">
+            <h2><i class="fas fa-info-circle"></i> À propos de nous</h2>
+            <div class="text-bubble">
+                <p>Nous sommes un groupe de prière, principalement destiné aux étudiants et jeunes professionnels âgés de 18 à 25 ans. Chaque semaine, nous nous retrouvons à l'église Sainte Madeleine, au cœur de Nantes, pour louer, prier et méditer ensemble la Parole de Dieu. En tant que membres de la <a href="https://www.emmanuel.info" target="_blank">Communauté de l'Emmanuel</a>, nous vivons un temps de fraternité et de croissance spirituelle.</p>
+            </div>
+            <div class="text-bubble">
+                <p>Peu importe où tu en es dans ta foi, tu es le bienvenu parmi nous. Ici, il n'est pas nécessaire d'avoir "tout compris" ou d'être déjà au sommet de ta vie spirituelle. Nous partageons et grandissons ensemble dans un esprit d'accueil et de bienveillance. Découvre <a href="#horaires">nos horaires</a> pour nous rejoindre !</p>
+            </div>
+            <div class="text-bubble">
+                <p>Si tu souhaites prier chaque jour, nous te recommandons de visiter le site de la Communauté de l'Emmanuel pour découvrir la rubrique <a href="https://emmanuel.info/dossiers/prier-chaque-jour/" target="_blank">Prier chaque jour</a>.</p>
+            </div>
+        </section>
+
+        <section id="horaires">
+            <h2><i class="fas fa-clock"></i> Horaires & Localisation</h2>
+            <div class="text-bubble">
+                <p><strong><i class="fas fa-church"></i> Lieu :</strong> Église Sainte-Madeleine, 14 Boulevard Gustave Roch, 44200 Nantes - Arrêt Vincent Gâche (2, 3, 5) ou Gustave Roch (26)</p>
+                <p><strong><i class="fas fa-calendar-alt"></i> Quand :</strong> Chaque jeudi de 20h00 à 22h15</p>
+                <p>Un temps de prière, de louange, de partage et de convivialité t'attend chaque semaine. En cas de changement, les informations seront disponibles sur nos réseaux sociaux.</p>
+                <p>
+                    <a href="https://www.google.com/maps?q=14+Boulevard+Gustave+Roch,+44200+Nantes" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-map-marked-alt"></i> Voir sur Google Maps
+                    </a>
+                </p>
+            </div>
+            <div class="map-container" style="margin-top: 1rem;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.222190065379!2d-1.5528000846340953!3d47.20787267916143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ea2df2c4e01b%3A0x780f393147b9dbff!2s14%20Bd%20Gustave%20Roch%2C%2044200%20Nantes!5e0!3m2!1sfr!2sfr!4v1713968048714!5m2!1sfr!2sfr"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="evenements">
+            <h2><i class="fas fa-calendar-alt"></i> Événements</h2>
+            <div class="event">
+                <h3><i class="fas fa-pray"></i> Paray-le-Monial</h3>
+                <div class="text-bubble event-bubble">
+                    <div class="event-decoration">✞</div>
+                    <p>Récemment, on a eu la joie de vivre un temps fort au Forum des jeunes à Paray-le-Monial, pendant le Forum d'hiver.</p>
+                    <p>C'était un moment inoubliable : <strong>des rencontres fortes, des temps de prière intenses, des fous rires, de la convivialité, et surtout une présence de Dieu qui nous a profondément marquée</strong>.</p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="https://i.imgur.com/OXGbVWi.jpg" alt="Jeunes priant lors du Forum des jeunes à Paray-le-Monial" class="carousel-image">
+                        <img src="https://i.imgur.com/32sM03t.jpg" alt="Moment de fraternité à Paray-le-Monial" class="carousel-image">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                </div>
+            </div>
+        
+            <div class="event">
+                <h3><i class="fas fa-cross"></i> Week-end GP</h3>
+                <div class="text-bubble event-bubble">
+                    <div class="event-decoration">✝</div>
+                    <p>Quel beau moment nous avons vécu ensemble ! Ce week-end a été une véritable grâce, rempli de rencontres, de prières intenses et de louanges joyeuses.</p>
+                    <p>Chacun a pu se ressourcer spirituellement, approfondir sa foi et tisser des liens fraternels dans la joie du Christ.</p>
+                    <p><strong>« Voyez comme il est bon, comme il est doux d'habiter en frères tous ensemble ! » (Ps 133,1)</strong></p>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="https://i.imgur.com/OxKyuHO.jpeg" alt="Moment de prière lors du Week-end GP" class="carousel-image">
+                        <img src="https://i.imgur.com/Q4e4jjZ.jpeg" alt="Fraternité et partage au Week-end GP" class="carousel-image">
+                        <img src="https://i.imgur.com/6MLU69G.jpeg" alt="Temps de louange au Week-end GP" class="carousel-image">
+                        <img src="https://i.imgur.com/6C8R0Iw.jpeg" alt="Rencontre conviviale au Week-end GP" class="carousel-image">
+                        <img src="https://i.imgur.com/xsRnzor.jpeg" alt="Instant spirituel au Week-end GP" class="carousel-image">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                </div>
+            </div>
+        
+            <div class="event">
+                <h3><i class="fas fa-star-

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://gpemmanuelnantes.fr/</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/"/>
+    </url>
+    <url>
+        <loc>https://gpemmanuelnantes.fr/#accueil</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/#accueil"/>
+    </url>
+    <url>
+        <loc>https://gpemmanuelnantes.fr/#a-propos</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/#a-propos"/>
+    </url>
+    <url>
+        <loc>https://gpemmanuelnantes.fr/#horaires</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/#horaires"/>
+    </url>
+    <url>
+        <loc>https://gpemmanuelnantes.fr/#evenements</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/#evenements"/>
+    </url>
+    <url>
+        <loc>https://gpemmanuelnantes.fr/#contact</loc>
+        <lastmod>2025-04-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://gpemmanuelnantes.fr/#contact"/>
+    </url>
+</urlset>
