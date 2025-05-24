@@ -13,7 +13,6 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://gpemmanuelnantes.fr">
-    <link rel="manifest" href="/manifest.json">
     <title>Groupe de Prière Emmanuel Nantes</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/wocrVOL.png">
     <link rel="preload" href="https://i.imgur.com/wocrVOL.png" as="image">
@@ -85,11 +84,8 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .religious-border, .banner, .carousel-inner, .verse-tile, .prayer-modal, .event-notification {
-                animation: none !important;
-                transform: none !important;
-            }
-            .particle, .pulse, .fadeInUp { animation: none !important; }
+            .religious-border { animation: none; }
+            .particle, .pulse, .fadeInUp, .carousel-inner { animation: none !important; }
         }
 
         .religious-border::before {
@@ -142,18 +138,12 @@
             font-style: italic;
             color: var(--primary-dark);
             margin-right: 1rem;
-            transition: opacity 0.3s ease;
         }
 
         .verse-header small {
             font-size: 0.9rem;
             color: var(--primary-dark);
             font-weight: 600;
-            transition: opacity 0.3s ease;
-        }
-
-        .verse-header.changing p, .verse-header.changing small {
-            opacity: 0;
         }
 
         .dark-mode .verse-header p, .dark-mode .verse-header small {
@@ -161,7 +151,7 @@
         }
 
         .verse-header::before {
-            content: "\f5a0";
+            content: "\f1da";
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
@@ -202,186 +192,6 @@
 
         #change-verse.pulse {
             animation: randomPulse 0.6s ease;
-        }
-
-        /* Event notification */
-        .event-notification {
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(145deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            z-index: 1002;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            animation: slideDown 0.5s ease;
-            max-width: 90%;
-            text-align: center;
-        }
-
-        .event-notification.hidden {
-            display: none;
-        }
-
-        .event-notification p {
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        .event-notification button {
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .event-notification button:hover, .event-notification button:focus {
-            transform: scale(1.2);
-            outline: 2px solid var(--white);
-        }
-
-        @keyframes slideDown {
-            from { transform: translateX(-50%) translateY(-20px); opacity: 0; }
-            to { transform: translateX(-50%) translateY(0); opacity: 1; }
-        }
-
-        /* Prayer modal */
-        .prayer-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1003;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .prayer-modal.show {
-            display: flex;
-        }
-
-        .prayer-modal-content {
-            background: linear-gradient(145deg, var(--white), var(--light-bg));
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            max-width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: var(--shadow);
-            position: relative;
-            animation: scaleIn 0.3s ease;
-        }
-
-        .dark-mode .prayer-modal-content {
-            background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
-        }
-
-        .prayer-modal-content h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .dark-mode .prayer-modal-content h3 {
-            color: var(--primary-light);
-        }
-
-        .prayer-modal-content p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .prayer-modal-content button {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            padding: 0.8rem 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: block;
-            margin: 1rem auto;
-        }
-
-        .prayer-modal-content button:hover, .prayer-modal-content button:focus {
-            background: var(--primary-dark);
-            transform: scale(1.05);
-            outline: 2px solid var(--primary-dark);
-        }
-
-        #prayer-button {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(145deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            z-index: 1001;
-        }
-
-        #prayer-button:hover, #prayer-button:focus {
-            transform: scale(1.1);
-            box-shadow: var(--glow);
-            outline: 2px solid var(--primary-dark);
-        }
-
-        #prayer-button.pulse {
-            animation: randomPulse 0.6s ease;
-        }
-
-        @keyframes scaleIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Offline message */
-        .offline-message {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(145deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            z-index: 1002;
-            display: none;
-            text-align: center;
-            max-width: 90%;
-        }
-
-        .offline-message.show {
-            display: block;
-        }
-
-        .offline-message p {
-            font-size: 0.9rem;
-            margin: 0;
         }
 
         /* Header styles */
@@ -761,28 +571,17 @@
             background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
         }
 
-        /* Banner section with parallax */
+        /* Banner section */
         .banner {
             position: relative;
             height: 250px;
-            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
             border-radius: var(--border-radius);
             margin-bottom: 2rem;
             box-shadow: var(--shadow);
             transform: translateZ(0);
-        }
-
-        .banner-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            transform: translateY(0);
-            transition: transform 0.3s ease;
         }
 
         .banner-overlay {
@@ -876,7 +675,7 @@
             background: rgba(112, 176, 186, 0.08);
         }
 
-        /* Carousel styles with parallax */
+        /* Carousel styles */
         .carousel-container {
             margin: 2rem 0;
             touch-action: pan-y;
@@ -901,11 +700,10 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
-            transform: translateZ(0);
         }
 
         .carousel-image.active {
-            transform: scale(1.02) translateY(0);
+            transform: scale(1.02);
         }
 
         .carousel-nav {
@@ -957,7 +755,7 @@
         .carousel-prev { left: 10px; }
         .carousel-next { right: 10px; }
 
-        /* Bible verses mosaic with 3D hover */
+        /* Bible verses mosaic */
         .bible-verses-mosaic {
             display: grid;
             grid-template-columns: 1fr;
@@ -978,11 +776,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            perspective: 1000px;
         }
 
         .verse-tile:hover {
-            transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
+            transform: translateY(-5px);
             box-shadow: var(--glow);
             background: linear-gradient(145deg, var(--primary-light), var(--primary-color));
             color: var(--white);
@@ -1188,10 +985,9 @@
             justify-content: center;
         }
 
-        #back-to-top:hover, #back-to-top:focus {
+        #back-to-top:hover {
             transform: scale(1.1);
             box-shadow: var(--glow);
-            outline: 2px solid var(--primary-dark);
         }
 
         /* Responsive styles - Mobile first */
@@ -1348,25 +1144,6 @@
         <i class="fas fa-cross fa-spin"></i>
     </div>
 
-    <div class="event-notification" id="event-notification">
-        <p>Jubilé des jeunes le 15 juin 2025 ! <span id="countdown"></span> <a href="#evenements">Inscrivez-vous</a></p>
-        <button aria-label="Fermer la notification"><i class="fas fa-times"></i></button>
-    </div>
-
-    <div class="offline-message" id="offline-message">
-        <p>Vous êtes hors ligne. « Confie-toi en l'Éternel de tout ton cœur. » (Proverbes 3:5)</p>
-    </div>
-
-    <div class="prayer-modal" id="prayer-modal">
-        <div class="prayer-modal-content">
-            <h3>Prière du jour</h3>
-            <p id="prayer-text"></p>
-            <button id="close-prayer" aria-label="Fermer la prière">Fermer</button>
-        </div>
-    </div>
-
-    <button id="prayer-button" aria-label="Ouvrir la prière du jour"><i class="fas fa-pray"></i></button>
-
     <div class="religious-border top-border"></div>
     <header>
         <div class="header-container">
@@ -1399,7 +1176,6 @@
     <main>
         <section id="accueil">
             <div class="banner">
-                <div class="banner-bg"></div>
                 <div class="banner-overlay"></div>
                 <div class="banner-content">
                     <h2>« Là où deux ou trois sont réunis en mon nom, je suis là, au milieu d'eux. »<br>Matthieu 18, 20</h2>
@@ -1634,7 +1410,7 @@
             setInterval(createParticle, 3000);
 
             // Random pulse animation
-            const elementsToPulse = document.querySelectorAll('.logo, .verse-tile, .social-links a, #change-verse, #prayer-button');
+            const elementsToPulse = document.querySelectorAll('.logo, .verse-tile, .social-links a, #change-verse');
             function randomPulse() {
                 elementsToPulse.forEach(el => {
                     if (Math.random() < 0.1) {
@@ -1667,26 +1443,17 @@
                 { text: "Aimez-vous les uns les autres comme je vous ai aimés.", ref: "Jean 13:34" },
                 { text: "Que ma joie soit en vous, et que votre joie soit complète.", ref: "Jean 15:11" },
                 { text: "Confie-toi en l'Éternel de tout ton cœur, et ne t'appuie pas sur ta sagesse.", ref: "Proverbes 3:5" },
-                { text: "Tout ce que vous demanderez avec foi par la prière, vous le recevrez.", ref: "Matthieu 21:22" },
-                { text: "L'Éternel est mon berger : je ne manque de rien.", ref: "Psaume 23:1" },
-                { text: "Soyez joyeux dans l'espérance, patients dans l'épreuve, persévérants dans la prière.", ref: "Romains 12:12" },
-                { text: "Le Seigneur est ma lumière et mon salut ; de qui aurais-je crainte ?", ref: "Psaume 27:1" },
-                { text: "Tout concourt au bien de ceux qui aiment Dieu.", ref: "Romains 8:28" }
+                { text: "Tout ce que vous demanderez avec foi par la prière, vous le recevrez.", ref: "Matthieu 21:22" }
             ];
 
             const verseText = document.getElementById('verse-text');
             const verseRef = document.getElementById('verse-ref');
             const changeVerseButton = document.getElementById('change-verse');
-            const verseHeader = document.querySelector('.verse-header');
 
             function displayRandomVerse() {
-                verseHeader.classList.add('changing');
-                setTimeout(() => {
-                    const randomIndex = Math.floor(Math.random() * verses.length);
-                    verseText.textContent = verses[randomIndex].text;
-                    verseRef.textContent = verses[randomIndex].ref;
-                    verseHeader.classList.remove('changing');
-                }, 300);
+                const randomIndex = Math.floor(Math.random() * verses.length);
+                verseText.textContent = verses[randomIndex].text;
+                verseRef.textContent = verses[randomIndex].ref;
             }
 
             displayRandomVerse();
@@ -1695,104 +1462,6 @@
                 displayRandomVerse();
                 changeVerseButton.classList.add('pulse');
                 setTimeout(() => changeVerseButton.classList.remove('pulse'), 600);
-            });
-
-            // Prayer modal
-            const prayers = [
-                {
-                    title: "Notre Père",
-                    text: "Notre Père qui es aux cieux, que ton nom soit sanctifié, que ton règne vienne, que ta volonté soit faite sur la terre comme au ciel. Donne-nous aujourd'hui notre pain de ce jour. Pardonne-nous nos offenses, comme nous pardonnons aussi à ceux qui nous ont offensés. Et ne nous soumets pas à la tentation, mais délivre-nous du mal. Amen."
-                },
-                {
-                    title: "Je vous salue Marie",
-                    text: "Je vous salue, Marie, pleine de grâce, le Seigneur est avec vous. Vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l'heure de notre mort. Amen."
-                },
-                {
-                    title: "Prière du jour",
-                    text: "Seigneur, guide-nous dans ta lumière. Donne-nous la force de marcher dans tes voies et la joie de partager ton amour avec nos frères et sœurs. Amen."
-                }
-            ];
-
-            const prayerModal = document.getElementById('prayer-modal');
-            const prayerText = document.getElementById('prayer-text');
-            const prayerTitle = prayerModal.querySelector('h3');
-            const closePrayer = document.getElementById('close-prayer');
-            const prayerButton = document.getElementById('prayer-button');
-
-            function displayPrayer(index) {
-                prayerTitle.textContent = prayers[index].title;
-                prayerText.textContent = prayers[index].text;
-                localStorage.setItem('lastPrayer', index);
-            }
-
-            prayerButton.addEventListener('click', () => {
-                const lastPrayer = localStorage.getItem('lastPrayer') || 0;
-                displayPrayer(lastPrayer);
-                prayerModal.classList.add('show');
-                closePrayer.focus();
-            });
-
-            closePrayer.addEventListener('click', () => {
-                prayerModal.classList.remove('show');
-                prayerButton.focus();
-            });
-
-            prayerModal.addEventListener('click', (e) => {
-                if (e.target === prayerModal) {
-                    prayerModal.classList.remove('show');
-                    prayerButton.focus();
-                }
-            });
-
-            // Event notification countdown
-            const eventDate = new Date('2025-06-15T00:00:00');
-            const countdownElement = document.getElementById('countdown');
-            const eventNotification = document.getElementById('event-notification');
-
-            function updateCountdown() {
-                const now = new Date();
-                const timeLeft = eventDate - now;
-               if (timeLeft <= 0) {
-    countdownElement.textContent = "C'est aujourd'hui !";
-    eventNotification.classList.remove('hidden');
-    return;
-}
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                countdownElement.textContent = `Dans ${days} jour${days > 1 ? 's' : ''}`;
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 86400000); // Update daily
-
-            eventNotification.querySelector('button').addEventListener('click', () => {
-                eventNotification.classList.add('hidden');
-            });
-
-            setTimeout(() => eventNotification.classList.add('hidden'), 5000);
-
-            // Offline detection
-            const offlineMessage = document.getElementById('offline-message');
-            window.addEventListener('offline', () => {
-                offlineMessage.classList.add('show');
-                setTimeout(() => offlineMessage.classList.remove('show'), 5000);
-            });
-
-            window.addEventListener('online', () => {
-                offlineMessage.classList.remove('show');
-            });
-
-            // Parallax effect
-            const bannerBg = document.querySelector('.banner-bg');
-            const carouselImages = document.querySelectorAll('.carousel-image');
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY;
-                bannerBg.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-                carouselImages.forEach(img => {
-                    const rect = img.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        img.style.transform = `scale(1.02) translateY(${scrollPosition * 0.1}px)`;
-                    }
-                });
             });
 
             // Carousel
@@ -1868,11 +1537,13 @@
                 body.classList.add('dark-mode');
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             }
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDarkMode = body.classList.contains('dark-mode');
-    themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                themeToggle.innerHTML = body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
         });
     </script>
+</body>
+</html>
