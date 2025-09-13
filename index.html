@@ -802,17 +802,38 @@
             height: 300px;
             box-shadow: var(--shadow);
             position: relative;
+            border: 2px solid var(--primary-light);
+            transition: border-color 0.3s ease;
+        }
+
+        .map-container:hover {
+            border-color: var(--primary-color);
         }
 
         .map-container::before {
-            content: '';
+            content: '\f3c5';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom right, rgba(112, 176, 186, 0.1), rgba(112, 176, 186, 0.05));
-            z-index: 1;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            background: var(--white);
+            padding: 6px;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .map-container:hover::before {
+            transform: scale(1.1);
+            color: var(--primary-dark);
+        }
+
+        .dark-mode .map-container::before {
+            background: var(--dark-bg);
         }
 
         .map-container iframe {
@@ -828,7 +849,7 @@
         }
 
         .dark-mode .map-container iframe {
-            filter: grayscale(50%) invert(90%);
+            filter: grayscale(50%) invert(90%) hue-rotate(180deg);
         }
 
         /* Footer */
@@ -1173,18 +1194,22 @@
                 <div class="carousel-container">
                     <div class="carousel">
                         <div class="carousel-inner">
-                            <img src="https://i.imgur.com/Rk4Xnhv.jpg" alt="Moment de prière lors du Jubilé des jeunes" class="carousel-image active" loading="lazy">
-                            <img src="https://i.imgur.com/TsBMcek.jpg" alt="Fraternité au Jubilé des jeunes" class="carousel-image" loading="lazy">
-                            <img src="https://i.imgur.com/brUKBKp.jpg" alt="Temps de louange au Jubilé des jeunes" class="carousel-image" loading="lazy">
-                            <img src="https://i.imgur.com/02uYge4.jpg" alt="Rencontre conviviale au Jubilé des jeunes" class="carousel-image" loading="lazy">
-                            <img src="https://i.imgur.com/4E0NtJg.jpg" alt="Instant spirituel au Jubilé des jeunes" class="carousel-image" loading="lazy">
-                            <img src="https://i.imgur.com/oIVwHkn.jpg" alt="Célébration au Jubilé des jeunes" class="carousel-image" loading="lazy">
-                            <img src="https://i.imgur.com/Dncxmbv.jpg" alt="Moment fort au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/KG1dgbx.jpeg" alt="Moment de prière lors du Jubilé des jeunes" class="carousel-image active" loading="lazy">
+                            <img src="https://i.imgur.com/pqmd0Ih.jpeg" alt="Fraternité au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/0v6vl3U.jpeg" alt="Temps de louange au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/4hxaMe2.jpeg" alt="Rencontre conviviale au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/yynJY5g.jpeg" alt="Instant spirituel au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/dVO1BHd.jpeg" alt="Célébration au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/GjAGW3z.jpeg" alt="Moment fort au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/kNBKYDc.jpeg" alt="Rassemblement au Jubilé des jeunes" class="carousel-image" loading="lazy">
+                            <img src="https://i.imgur.com/twUoz3p.jpeg" alt="Joie au Jubilé des jeunes" class="carousel-image" loading="lazy">
                         </div>
                         <button class="carousel-prev" aria-label="Image précédente">❮</button>
                         <button class="carousel-next" aria-label="Image suivante">❯</button>
                         <div class="carousel-nav">
                             <div class="carousel-dot active"></div>
+                            <div class="carousel-dot"></div>
+                            <div class="carousel-dot"></div>
                             <div class="carousel-dot"></div>
                             <div class="carousel-dot"></div>
                             <div class="carousel-dot"></div>
